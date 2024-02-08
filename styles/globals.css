@@ -1,0 +1,116 @@
+:root {
+  --underweight: orange;
+  --normal: green;
+  --overweight: lightcoral;
+  --obese: crimson;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: #f4f4f4;
+  display:flex;
+  justify-content:left;
+  align-items:center;
+  min-height: 100vh;
+  padding-left: 100px;
+}
+
+.container {
+  display:flex;
+  flex-direction: column; /* Stack children vertically */
+  justify-content: flex-start; /* Align children to the start of the main axis (left) */
+  align-items: center; /* Align children to the center of the cross axis */
+  width: 100%;;
+  max-width: 500px;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 5px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.25);
+  gap: 1.5rem;
+ 
+}
+
+
+.calculator {
+  display:grid;
+  gap: 1rem;
+}
+
+.calculator div {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.calculator label {
+  flex: 0 0 120px;
+  font-weight: 600;
+}
+
+.calculator input {
+  flex: 1;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.calculator button {
+  width: 50%;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  background: #00a1a3;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.calculator button[type="reset"] {
+  background: #444;
+}
+
+.calculator button:hover {
+  filter: brightness(100%);
+}
+
+.output {
+  text-align: center;
+}
+
+.output #bmi {
+  font-size: 4rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.output #desc strong {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.bmi-scale {
+  display:flex;
+}
+
+.bmi-scale div {
+  flex: 1;
+  text-align: center;
+  text-transform: uppercase;
+  border-top: 5px solid var(--color);
+  padding: 10px;
+  font-size: 0.9rem;
+}
+
+/* Adjust colors based on BMI category */
+.underweight { color: var(--underweight); }
+.healthy { color: var(--normal); }
+.overweight { color: var(--overweight); }
+.obese { color: var(--obese); }
